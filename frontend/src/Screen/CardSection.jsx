@@ -23,7 +23,7 @@ const CardSection = () => {
         dispatch(setUser(response)); // Google user set karna
       }
     } catch (error) {
-      console.error("Google Login Error:", error);
+      console.error("Google Login Some Error:", error);
     }
   };
 
