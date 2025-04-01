@@ -23,7 +23,7 @@ const CardSection = () => {
         dispatch(setUser(response)); // Google user set karna
       }
     } catch (error) {
-      console.error("Google Login My Error:", error);
+      console.error("Google Login Some Internal Error:", error);
     }
   };
 
@@ -82,7 +82,7 @@ const CardSection = () => {
       <div className="grid md:grid-cols-2 gap-8">
         {loading ? (
           <Typography variant="h6" className="text-center" color="primary">
-            Loading.......
+            Loading.
           </Typography>
         ) : filteredUsers.length > 0 ? (
           filteredUsers.map((user) => <Cards key={user._id} user={user} />)
